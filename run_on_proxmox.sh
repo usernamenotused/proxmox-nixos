@@ -5,7 +5,8 @@
 
 function create_vm(){
     declare -A vm
-    while [$# -gt 0]; do
+    while [ $# -gt 0 ]; do
+        shift
         case $1 in
             -i|--id)
                 vm[id]=$2
